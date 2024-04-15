@@ -1,0 +1,26 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid ">
+            <div class="row gy-5  w-100" style="justify-content: space-between;">
+
+                <div *ngFor="let tempProduct of products" class="card" style="width: 14rem; box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+                transition: .5s;">
+                    <img class="card-img-top" src="{{ tempProduct.imageUrl }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">{{ tempProduct.name}}</h6>
+                        <div class="price card-text">{{tempProduct.unitPrice | currency : 'USD'}}</div>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <!-- loop over the collection of products -->
+                <!-- <div *ngFor="let tempProduct of products" class="col-md-3">
+
+                    <div class="product-box">
+                        <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
+                        <h1>{{ tempProduct.name}}</h1>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
